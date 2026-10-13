@@ -1,0 +1,351 @@
+// ==========================================
+// BOOKVAULT - BOOK INVENTORY MANAGEMENT SYSTEM
+// Sequential MongoDB Queries
+// ==========================================
+
+// 1. CREATE DATABASE
+use library
+
+// 2. CREATE COLLECTION
+db.createCollection("books")
+
+// 3. INSERT MULTIPLE BOOKS DETAILS
+db.books.insertMany([
+  {
+    bookId: 1,
+    title: "The Alchemist",
+    author: "Paulo Coelho",
+    category: "Fiction",
+    price: 350,
+    year: 1988,
+    rating: 8.0
+  },
+  {
+    bookId: 2,
+    title: "Atomic Habits",
+    author: "James Clear",
+    category: "Self-Help",
+    price: 450,
+    year: 2018,
+    rating: 8.5
+  },
+  {
+    bookId: 3,
+    title: "Wings of Fire",
+    author: "A. P. J. Abdul Kalam",
+    category: "Biography",
+    price: 300,
+    year: 1999,
+    rating: 8.7
+  },
+  {
+    bookId: 4,
+    title: "Rich Dad Poor Dad",
+    author: "Robert Kiyosaki",
+    category: "Finance",
+    price: 400,
+    year: 1997,
+    rating: 7.8
+  },
+  {
+    bookId: 5,
+    title: "Harry Potter",
+    author: "J. K. Rowling",
+    category: "Fantasy",
+    price: 550,
+    year: 1997,
+    rating: 8.5
+  },
+  {
+    bookId: 6,
+    title: "The Great Gatsby",
+    author: "F. Scott Fitzgerald",
+    category: "Classic",
+    price: 250,
+    year: 1925,
+    rating: 7.5
+  },
+  {
+    bookId: 7,
+    title: "Think and Grow Rich",
+    author: "Napoleon Hill",
+    category: "Self-Help",
+    price: 320,
+    year: 1937,
+    rating: 8.0
+  },
+  {
+    bookId: 8,
+    title: "The Hobbit",
+    author: "J. R. R. Tolkien",
+    category: "Fantasy",
+    price: 480,
+    year: 1937,
+    rating: 8.4
+  },
+  {
+    bookId: 9,
+    title: "Sapiens",
+    author: "Yuval Noah Harari",
+    category: "History",
+    price: 600,
+    year: 2011,
+    rating: 8.2
+  },
+  {
+    bookId: 10,
+    title: "Ikigai",
+    author: "Hector Garcia",
+    category: "Self-Help",
+    price: 280,
+    year: 2016,
+    rating: 7.8
+  },
+  {
+    bookId: 11,
+    title: "1984",
+    author: "George Orwell",
+    category: "Dystopian",
+    price: 300,
+    year: 1949,
+    rating: 8.4
+  },
+  {
+    bookId: 12,
+    title: "To Kill a Mockingbird",
+    author: "Harper Lee",
+    category: "Classic",
+    price: 350,
+    year: 1960,
+    rating: 8.3
+  },
+  {
+    bookId: 13,
+    title: "The Power of Your Subconscious Mind",
+    author: "Joseph Murphy",
+    category: "Self-Help",
+    price: 290,
+    year: 1963,
+    rating: 7.9
+  },
+  {
+    bookId: 14,
+    title: "A Brief History of Time",
+    author: "Stephen Hawking",
+    category: "Science",
+    price: 500,
+    year: 1988,
+    rating: 8.2
+  },
+  {
+    bookId: 15,
+    title: "The Diary of a Young Girl",
+    author: "Anne Frank",
+    category: "Biography",
+    price: 320,
+    year: 1947,
+    rating: 8.3
+  },
+  {
+    bookId: 16,
+    title: "Deep Work",
+    author: "Cal Newport",
+    category: "Productivity",
+    price: 420,
+    year: 2016,
+    rating: 8.1
+  },
+  {
+    bookId: 17,
+    title: "The Psychology of Money",
+    author: "Morgan Housel",
+    category: "Finance",
+    price: 380,
+    year: 2020,
+    rating: 8.6
+  },
+  {
+    bookId: 18,
+    title: "Clean Code",
+    author: "Robert C. Martin",
+    category: "Technology",
+    price: 750,
+    year: 2008,
+    rating: 8.4
+  },
+  {
+    bookId: 19,
+    title: "The Intelligent Investor",
+    author: "Benjamin Graham",
+    category: "Finance",
+    price: 650,
+    year: 1949,
+    rating: 8.2
+  },
+  {
+    bookId: 20,
+    title: "The Fault in Our Stars",
+    author: "John Green",
+    category: "Romance",
+    price: 330,
+    year: 2012,
+    rating: 7.8
+  },
+  {
+    bookId: 21,
+    title: "Pride and Prejudice",
+    author: "Jane Austen",
+    category: "Romance",
+    price: 270,
+    year: 1813,
+    rating: 8.1
+  },
+  {
+    bookId: 22,
+    title: "Dune",
+    author: "Frank Herbert",
+    category: "Science Fiction",
+    price: 520,
+    year: 1965,
+    rating: 8.5
+  },
+  {
+    bookId: 23,
+    title: "The Book Thief",
+    author: "Markus Zusak",
+    category: "Historical Fiction",
+    price: 390,
+    year: 2005,
+    rating: 8.3
+  },
+  {
+    bookId: 24,
+    title: "Zero to One",
+    author: "Peter Thiel",
+    category: "Business",
+    price: 360,
+    year: 2014,
+    rating: 7.9
+  },
+  {
+    bookId: 25,
+    title: "The Lean Startup",
+    author: "Eric Ries",
+    category: "Business",
+    price: 430,
+    year: 2011,
+    rating: 8.0
+  },
+  {
+    bookId: 26,
+    title: "A Brief History of Nearly Everything",
+    author: "Bill Bryson",
+    category: "Science",
+    price: 580,
+    year: 2003,
+    rating: 8.2
+  },
+  {
+    bookId: 27,
+    title: "The Lord of the Rings",
+    author: "J. R. R. Tolkien",
+    category: "Fantasy",
+    price: 700,
+    year: 1954,
+    rating: 8.8
+  },
+  {
+    bookId: 28,
+    title: "The Kite Runner",
+    author: "Khaled Hosseini",
+    category: "Fiction",
+    price: 340,
+    year: 2003,
+    rating: 8.4
+  },
+  {
+    bookId: 29,
+    title: "Start With Why",
+    author: "Simon Sinek",
+    category: "Business",
+    price: 400,
+    year: 2009,
+    rating: 8.0
+  },
+  {
+    bookId: 30,
+    title: "The Silent Patient",
+    author: "Alex Michaelides",
+    category: "Thriller",
+    price: 370,
+    year: 2019,
+    rating: 8.1
+  }
+])
+
+// 4. DISPLAY ALL RECORDS
+db.books.find()
+
+// 5. DISPLAY ONLY BOOK TITLES AND AUTHORS (PROJECTION)
+db.books.find(
+  {},
+  {
+    _id: 0,
+    title: 1,
+    author: 1
+  }
+)
+
+// 6. FIND BOOKS BY CATEGORY
+db.books.find({
+  category: "Fantasy"
+})
+
+// 7. FIND BOOKS WITH A RATING ABOVE 8
+db.books.find({
+  rating: { $gt: 8 }
+})
+
+// 8. FIND BOOKS PRICED BELOW ₹400
+db.books.find({
+  price: { $lt: 400 }
+})
+
+// 9. FIND BOOKS PUBLISHED BETWEEN 2000 AND 2020
+db.books.find({
+  year: {
+    $gte: 2000,
+    $lte: 2020
+  }
+})
+
+// 10. SORT BOOKS BY PRICE (DESCENDING)
+db.books.find().sort({
+  price: -1
+})
+
+// 11. FIND TOP 5 HIGHEST-RATED BOOKS
+db.books.find()
+  .sort({ rating: -1 })
+  .limit(5)
+
+// 12. UPDATE A BOOK'S PRICE
+db.books.updateOne(
+  { bookId: 2 },
+  {
+    $set: { price: 500 }
+  }
+)
+
+// 13. COUNT BOOKS IN EACH CATEGORY (AGGREGATION)
+db.books.aggregate([
+  {
+    $group: {
+      _id: "$category",
+      totalBooks: { $sum: 1 }
+    }
+  },
+  {
+    $sort: { totalBooks: -1 }
+  }
+])
